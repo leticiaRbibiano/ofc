@@ -1,0 +1,546 @@
+
+/* Define estilos padrão para todos os elementos, removendo margens, preenchimentos e listas, desativando contornos, bordas e sublinhados de links */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+   
+}
+
+/* Define estilos específicos para o elemento HTML */
+html {
+    width: 100%;
+    height: 100%; /* Define a altura do elemento HTML para 100% da altura da tela do viewport */
+    font-size: 62.5%; /* Define o tamanho da fonte base para 62.5% do tamanho padrão, o que é comummente usado para facilitar a conversão de tamanhos de fonte em rem para pixels (1rem = 10px) */
+    font-family: "Georgia";
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal caso o conteúdo exceda a largura do viewport */
+}
+
+/* Estilo para o contêiner principal do cabeçalho */
+
+.content {
+    width: 100%; /* Define a largura igual à largura da tela */
+    height: 7%; /* Define a altura do cabeçalho */
+    display: flex; /* Usa o modelo de layout flexível */
+    top: -0.1%;
+    justify-content: space-around; /* Distribui o espaço entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    background: #008454; 
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    overflow: hidden; /* Oculta o conteúdo que se estende além da largura do contêiner */
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave para a opacidade */
+    z-index: 1;
+
+}
+.header-text {
+    width: 100%;
+    color: white;
+    padding: 1px 0;
+    position: relative;
+    top: -18px;
+    left: 2%;
+    z-index: 1;
+    font-size: 13px;
+    font-family: "Parisienne", cursive;
+    font-weight: 100px; /*grossura da frase */
+    float: left ;
+    animation: glow 5s ease infinite; /* Aplica a animação 'glow' com duração de 2 segundos e repetição infinita */
+}
+
+.segundoCabeçalho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+
+}
+
+.segundoCabeçalho img {
+    width: 100%;
+    height: 480%;
+    object-fit: cover;
+
+}
+.logo {
+    position: relative; /* Altera a posição para relativa */
+    margin-top: 20px; /* Adiciona margem superior para afastar do cabeçalho */
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+/* Estilo para o logotipo */
+.content .logo img{
+    width: 100%;
+    height: auto;
+
+}
+/* Estilo para o menu de navegação dentro do elemento com classe .content */
+.list-menu {
+    position: absolute;
+    top: 100%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 26%; /* Define a largura do menu de navegação */
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+}
+
+
+/* Estilo para os links dentro das listas do menu de navegação */
+.segundoCabeçalho .list-menu li a {
+    color: rgb(29, 131, 75); /* Define a cor do texto*/
+    font-family:'Arial Narrow';
+    font-size: 200%; /* Define o tamanho da fonte */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-weight: 20%; /* Define o peso da fonte */
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(6, 20, 17, 0.5); /* Adiciona sombreado */
+}
+
+
+.list-menu li:hover {
+    animation: shake 0.5s ease-in-out; /*animacao dos links*/
+}
+
+
+.content.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    opacity: 0; /* Define a opacidade como 0 quando o cabeçalho estiver oculto */
+}
+
+
+
+
+
+/* Estilo para o conteúdo principal dentro da primeira seção */
+.first-section .conteudo-principal {
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Alinha os elementos na vertical */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+}
+
+  /*--------------------------------------------------------------------------------------------------------------------*/
+  
+/* Estilo para o título h1 dentro da primeira seção em cima da imagem */
+.first-section .conteudo-principal h1 {
+    color: rgb(255, 255, 255);
+    font-size: 10rem; /* Define o tamanho da fonte */
+    margin-bottom: 2rem; /* Adiciona espaço abaixo do título */
+    font-family: 'Lucida Handwriting';
+    font-weight: normal; 
+    line-height: 3; /* Define o espaçamento entre as linhas de texto */
+    animation: scaleAnimation 7s infinite alternate; /* Adiciona a animação de escala */
+    white-space: nowrap;
+           text-shadow: 
+            -1px -1px 0 #000000,  
+            1px -1px 0 #000000,
+            -1px 1px 0 #000000,
+            1px 1px 0 #000000; /* Sombra que simula o contorno */
+        -webkit-text-stroke-width: 2px; /* Largura do contorno */
+        -webkit-text-stroke-color: rgb(100, 98, 98); /* Cor do contorno */
+        text-shadow: 2px 2px 1px rgba(6, 32, 17, 0.5); /* Adiciona sombreado */
+        
+}
+
+
+/* Estilo para o subtítulo h2 dentro da primeira seção */
+.first-section h2 {
+    color: rgb(177, 177, 177); /* Define a cor do texto */
+    font-size: 3rem; /* Define o tamanho da fonte */
+    font-weight: 300%; /* Define o peso da fonte */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-family: 'Georgia'; /* Define a fonte com estilo de caligrafia */
+    margin-bottom: 3rem; /* Adiciona espaço abaixo do subtítulo */
+    line-height: 1.5; /* Define o espaçamento entre as linhas de texto */
+    animation: fadeInUp 1s ease forwards; /* Adiciona a animação fadeInUp */
+    text-shadow: 2px 2px 1px rgba(6, 32, 17, 0.5); /* Adiciona sombreado */
+    
+}
+
+
+
+@keyframes buttonClickAnimation {
+    0% {
+        transform: scale(1); /* Começa com escala normal */
+    }
+    50% {
+        transform: scale(0.9); /* Diminui a escala para 90% */
+    }
+    100% {
+        transform: scale(1); /* Retorna à escala normal */
+    }
+}
+
+/* Estilo para o botão dentro da classe .btn */
+.btn button {
+    width: 100%; /* Define a largura do botão */
+    height: 60px; /* Define a altura do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    background-color:#008454; /* Define a cor de fundo do botão */
+    border-radius: 10px; /* Define o raio das bordas do botão */
+    color: rgb(7, 7, 7); /* Define a cor do texto */
+    font-weight: 700; /* Define o peso da fonte */
+    transition: all 300ms ease-in; /* Adiciona uma transição suave para as mudanças */
+    margin-top: 5rem; /* Adiciona espaço acima do botão */
+}
+
+/* Estilo para o botão DA IMAGEM quando o cursor está sobre ele */
+.btn button:hover {
+    border: 1px solid rgb(14, 88, 14); /* Adiciona uma borda ao botão quando hover */
+    background-color: transparent; /* Torna o fundo do botão transparente quando hover */
+    color: rgb(20, 97, 17); /* Altera a cor do texto para amarelo quando hover */
+}
+
+/* Estilo para o contêiner de botões */
+.btn {
+    width: 250px; /* Define a largura. move para o lado */
+    display: flex; /* Usa o modelo de layout flexível */
+}
+
+/* Estilo para a seção do cardápio */
+.cardapio {
+    width: 100vw; /* Define a largura da seção do cardápio como 100% da largura da viewport */
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Alinha os elementos na vertical */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    background-color: #c5c1c5;    
+    background-position: center center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+    background-size: cover;
+}
+
+/* Estilo para o título h2 dentro da seção do cardápio */
+
+
+.cardapio2 h1 {
+    font-size: 5rem;
+    color:#008454;
+    text-transform: uppercase;
+    margin-top: 30rem;
+    animation: slide 2s ease-in-out infinite alternate; /* Aplica a animação */
+    text-shadow: 1px 1px 1px rgba(6, 32, 17, 0.5); /* Adiciona sombreado */
+    animation: pulse 10s infinite;
+    
+    
+
+   
+}
+.abobora h1{
+    animation: glow 2s infinite; /* Aplica a animação de brilho para a frase ENCOMENDAS*/
+}
+
+.abobora .botao {
+    /* Estilos para o botao com a foto */
+    width: 100vw; /* Largura ocupando 100% da largura da tela */
+    padding: 3.90% 0; /* Espaçamento interno, 40% da altura da tela para cima e para baixo, 0 para os lados */
+    font-size: 20px; /* Tamanho da fonte */
+    color: #0a0a0a; /* Cor do texto */
+    background-color: #008454; /* Cor de fundo */
+    border: 4px solid #008454; /* Borda sólida */
+    cursor: pointer; /* Cursor do mouse ao passar sobre o botão */
+    outline: none; /* Remove a aparência do foco do botão */
+    position: relative; /* Define a posição como relativa para posicionar a imagem */
+    white-space: nowrap; /* Impede a quebra de linha */
+    text-transform: uppercase; 
+    box-sizing: border-box; /* Mantém o padding dentro do width */
+    margin-top: -50%;
+    animation: glow 5s ease infinite; /* Aplica a animação 'glow' com duração de 2 segundos e repetição infinita */
+
+}
+
+.abobora .botao::after {
+    content: url('img/delivery-motoboy.webp'); /* Define a imagem de fundo */
+    position: absolute; /* Define a posição como absoluta */
+    width: 100%; /* Define a largura original da imagem */
+    height: 1.10%; /* Define a altura original da imagem */
+    left: 50%; /* Ajusta a posição horizontalmente para o centro */
+    top: 40px; /* Ajusta a posição verticalmente */
+   
+    transform: translateX(-50%) scale(0.1); /* Redimensiona a imagem para 10% do tamanho original e centraliza horizontalmente */
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+.first-section {
+    background-position: center center; /* Centraliza a imagem de fundo */
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o elemento */
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Alinha os elementos na vertical */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    z-index: 1;
+}
+
+
+
+.conteudo-principal {
+    position: absolute; /* Define a posição absoluta para o conteúdo principal */
+    top: 50%; /* Posiciona o conteúdo no meio vertical da seção */
+    left: 50%; /* Posiciona o conteúdo no meio horizontal da seção */
+    transform: translate(-50%, -50%); /* Move o conteúdo de volta 50% de sua largura e altura, garantindo que fique centrado */
+    text-align: center; /* Centraliza o texto dentro do conteúdo principal */
+    z-index: 2; /* Define um z-index maior para o conteúdo principal */
+    
+}
+
+.mySlides img {
+    width: 100%; /* Define uma largura de 100% para as imagens */
+    height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção original */
+    object-fit: cover; /* Garante que a imagem cubra completamente o espaço do contêiner, mantendo a proporção */
+}
+
+
+
+
+
+
+
+/* Estilo para os itens do cardápio */
+.itens-cardapio .frango,
+.itens-cardapio .calabresa,
+.itens-cardapio .confete,
+.itens-cardapio .prestigio {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #2a8023; /* Cor da borda */
+    border-radius: 30px; /* Borda arredondada */
+    transition: border-color 0.7s ease; /* Transição suave para a cor da borda */
+    box-shadow: 0 0 30px rgba(148, 60, 60, 0.1); /* Sombra para efeito 3D */}
+
+/* Efeito de borda ao passar o mouse */
+.itens-cardapio .frango:hover,
+.itens-cardapio .calabresa:hover,
+.itens-cardapio .confete:hover,
+.itens-cardapio .prestigio:hover {
+    border-color:#0d4734; /* Cor da borda ao passar o mouse */
+}
+
+/* Estilo para os itens do cardápio */
+.itens-cardapio {
+    width: 100%; /* Define a largura dos blocos do cardápio */
+    margin-top: 10rem; /* Adiciona espaço acima dos itens */
+    margin-bottom: 20rem; /* Adiciona espaço abaixo dos itens do cardapio*/
+    display: grid; /* Usa o modelo de layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 550px)); /* Define o número e a largura mínima/máxima das colunas */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 180px; /* Define o espaçamento entre os itens */
+  
+}
+
+
+
+
+
+
+/* Estilo para a informação dos itens do cardápio */
+.itens-cardapio .info {
+    background-color: transparent; /* Define a cor de fundo do cardapio */
+    border: none; /* Remove a borda */
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Alinha os elementos na vertical */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    padding: 8rem; /* Adiciona preenchimento */
+}
+
+/* Estilo para o título dentro das informações dos itens do cardápio */
+.itens-cardapio .info h1 {
+    font-size: 3rem; /* Define o tamanho da fonte */
+    margin-bottom: 1rem; /* Adiciona espaço abaixo do título */
+    text-decoration: none; /*remove os sublinhados dos elementos*/
+    
+}
+
+
+.conteudo-principal h1 {
+    animation: rainbowAnimation 4s linear infinite;
+}
+
+
+
+
+
+
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-353px); }
+    100% { transform: translateY(0); }
+}
+
+
+/* Estilo para o título dentro das informações dos itens do cardápio */
+.itens-cardapio .info h1 {
+    margin-bottom: 10rem; /* Adiciona espaço abaixo do título */
+    display: grid; /* Usa o modelo de layout grid */
+    margin-left: 2rem; /* Adiciona margem à esquerda */
+}
+
+
+/* Estilo para os itens do cardápio */
+.itens-cardapio div {
+    background-color: #ccc5c5; /* Define a cor de fundo */
+    box-shadow: 0px 0px 4px 1px; /* Adiciona uma sombra */
+}
+
+/* Estilo para as imagens dentro dos itens do cardápio */
+.itens-cardapio img {
+    width: 100%; /* Define a largura da imagem do contêiner */
+    height: 350px; /* Define a altura da imagem */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+
+}
+
+.itens-cardapio .info.transparencia {
+    background-color: rgba(255, 255, 255, 0.5); /* Define a cor de fundo com opacidade */
+}
+
+/* Estilo para a imagem dos itens do cardápio quando a classe "opacidade" está presente */
+.itens-cardapio .info img.opacidade {
+    opacity: 0.7; /* Reduz a opacidade da imagem */
+}
+/* Estilo para o botão "pedir" dentro das informações dos itens do cardápio */
+.itens-cardapio .info .pedir {
+    width: 200px; /* Define a largura do botão */
+    height: 35px; /* Define a altura do botão */
+    margin-top: 0.5rem; /* Adiciona espaço acima do botão */
+    background-color:#008454; /* Define a cor de fundo do botão */
+    border-radius: 5px; /* Define o raio das bordas do botão */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    color: rgb(0, 0, 0); /* Define a cor do texto */
+    transition: all 200ms ease-in; /* Adiciona uma transição suave para as mudanças */
+}
+
+/* Estilo para o botão quando o cursor está sobre ele */
+.itens-cardapio .info .pedir:hover {
+    background-color:#a328a7; /* Altera a cor de fundo quando o mouse passar em cima */
+    color: rgb(255, 255, 255); /* Altera a cor do texto */
+}
+/* Estilo para o contêiner principal */
+.main {
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+}
+
+/* Estilo para o parágrafo dentro da seção "sobre-nos" */
+.contentsobre p {
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 1.8rem; /* Define o tamanho da fonte */
+    width: 600px; /* Define a largura máxima do parágrafo */
+}
+
+/* Estilo para a seção "contatos" */
+.contatos {
+    width: 100%; /* Define a largura da seção como 100% */
+    background-color:#008454; /* Define a cor de fundo */
+    display: flex; /* Usa o modelo de layout flexível */
+    flex-direction: column; /* Alinha os elementos na vertical */
+    justify-content: center; /* Centraliza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    font-size: 1.8rem; /* Define o tamanho da fonte */
+    color: white; /* Define a cor do texto como branco */
+    padding-bottom: 4rem; /* Adiciona preenchimento abaixo da seção */
+}
+
+/* Estilo para o título h3 dentro da seção "contatos" */
+.contatos h3 {
+    font-size: 6rem; /* Define o tamanho da fonte do título */
+    margin-bottom: 3rem; /* Adiciona espaço abaixo do título */
+    font-family: 'Indie Flower', cursive; /* Define a fonte personalizada */
+ }
+ 
+ /* Estilo para o contêiner de contatos dentro DO RODAPÉ */
+ .contatos-secao {
+     width: 800px; /* Define a largura do contêiner de contatos */
+     display: flex; /* Usa o modelo de layout flexível */
+     justify-content: space-between; /* Distribui o espaço entre os elementos */
+     font-size: 2rem; /* Define o tamanho da fonte */
+ }
+ 
+
+ /* Estilo para os elementos div dentro do RODAPÉ */
+ .contatos-secao div {
+     cursor: pointer; /* Altera o cursor para indicar que os elementos são clicáveis */
+ }
+ 
+ /* Estilo para os elementos div dentro do RODAPÉ quando hover */
+ .contatos-secao div:hover {
+     color: #ff06ff; /* Altera a cor do texto quando paasar o mouse */
+ }
+ 
+
+
+
+ 
+
+
+
+
+/*ANIMACAO PARA O H1 EM "ENCOMENDAS*/
+@keyframes glow {
+    0% { 
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7); /* Adiciona uma sombra brilhante */
+        color: #fff; /* Muda a cor do texto para branco */
+    }
+    50% {
+        text-shadow: none; /* Remove a sombra */
+        color: rgb(252, 247, 253); /* Altera a cor do texto */
+    }
+    100% { 
+        text-shadow: 0 0 10px rgba(236, 234, 234, 0.7), 0 0 20px rgba(255, 255, 255, 0.7); /* Adiciona uma sombra brilhante novamente */
+        color: #fff; /* Muda a cor do texto para branco novamente */
+    }
+ }
+
+ 
+ 
+
+/* Animação para o efeito dos links do cabeçalho */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }                /*ANIMACAO DOS LINKS DO CABEÇALHO*/
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+ }
+ 
+ /* Definição da animação de escala */
+ @keyframes scaleAnimation {
+    0% { /* Começo da animação */
+        transform: scale(1); /* Define a escala inicial como 1 (sem alteração) */
+    }
+    100% { /* Fim da animação */
+        transform: scale(1.1); /* Define a escala final como 1.1 (10% maior) */
+    }
+ }
+ 
+ /* Definição da animação de "andar" */
+ @keyframes andar {
+    0% { transform: translateX(0); } /* Começa com a imagem na posição inicial */
+    100% { transform: translateX(20px); } /* Move a imagem horizontalmente */
+ }
+
+
+
+
+

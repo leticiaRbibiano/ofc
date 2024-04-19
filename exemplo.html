@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho em três páginas</title>
+    <style>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Estilos para as seções */
+        section {
+            padding: 20px;
+            margin-top: 80px; /* Compensar a altura do cabeçalho fixo */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cabeçalho</h1>
+        <nav>
+            <ul>
+                <li><a href="#paes">Página 1</a></li>
+                <li><a href="#doce">Página 2</a></li>
+                <li><a href="#salgados">Página 3</a></li>
+                <li><a href="#artesanais">pagina4</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="paes">
+            <h2>Pães</h2>
+            <!-- Conteúdo da página 1 -->
+        </section>
+        
+        <section id="doce">
+            <h2>Doces</h2>
+                        <!-- Conteúdo da página 2 -->
+        </section>
+        
+        <section id="salgados">
+            <h2>Salgados</h2>
+            <!-- Conteúdo da página 3 -->
+        </section>
+
+        <section id="artesanais">
+            <h2>Artesanais</h2>
+
+        </section>
+    </main>
+</body>
+</html>

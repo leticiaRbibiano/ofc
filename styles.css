@@ -1,0 +1,170 @@
+ /* Media query para dispositivos com largura máxima de 1200px */
+ @media (max-width: 1200px) {
+    .main {
+        display: block; /* Altera o modelo de layout para bloco */
+    }
+
+}
+
+
+
+
+
+/* Media query para dispositivos com largura máxima de 980px */
+@media (max-width: 980px) {
+   html {
+       font-size: 50%; /* Reduz o tamanho da fonte para 50% */
+   }
+}
+
+
+
+
+
+
+
+
+/* Media query para dispositivos com largura máxima de 870px */
+@media (max-width: 870px) {
+   /* Estilo para o contêiner 'content' quando a largura da tela é no máximo 870px */
+   .content {
+       justify-content: space-between; /* Distribui o espaço entre os elementos */
+       padding: 0px 80px; /* Adiciona preenchimento de 0px nas laterais e 40px no topo e na base */
+   }
+
+   /* Estilo para o menu de lista quando a largura da tela é no máximo 870px */
+   .content .list-menu {
+       display: none; /* Oculta o menu de lista */
+       padding: 80%;
+   }
+
+   /* Estilo para os elementos .one, .two e .three quando a largura da tela é no máximo 870px */
+   .one,
+   .two,
+   .three {
+       width: 100%; /* Define a largura como 100% */
+       height: 4px; /* Define a altura como 4px */
+       background-color: white; /* Define a cor de fundo como branca */
+       margin: 6px auto; /* Adiciona margem vertical de 6px e margem horizontal automática */
+       transition-duration: 0.5s; /* Define a duração da transição como 0.5 segundos */
+   }
+
+   /* Estilo para o botão de alternância de menu quando a largura da tela é no máximo 870px */
+   .menu-toggle {
+       width: 40px; /* Define a largura como 40px */
+       height: 30px; /* Define a altura como 30px */
+   }
+
+   /* Estilo para o contêiner 'content' quando está ativado (menu aberto) e a largura da tela é no máximo 870px */
+   .content.on {
+       position: absolute; /* Define a posição como absoluta */
+       top: 0; /* Alinha o elemento no topo */
+       left: 0; /* Alinha o elemento à esquerda */
+       width: 100vw; /* Define a largura como 100% da viewport */
+       height: 100vh; /* Define a altura como 100% da viewport */
+       z-index: 10; /* Define a ordem de empilhamento */
+       display: flex; /* Usa o modelo de layout flexível */
+       justify-content: center; /* Centraliza os elementos horizontalmente */
+       align-items: center; /* Centraliza os elementos verticalmente */
+   }
+
+   /* Estilo para o logo dentro do contêiner 'content' quando está ativado (menu aberto) e a largura da tela é no máximo 870px */
+   .content.on .logo {
+       display: none; /* Oculta o logo */
+   }
+
+   /* Estilo para o botão de alternância de menu dentro do contêiner 'content' quando está ativado (menu aberto) e a largura da tela é no máximo 870px */
+   .content.on .menu-toggle {
+       position: absolute; /* Define a posição como absoluta */
+       right: 40px; /* Alinha o elemento à direita com uma margem de 40px */
+       top: 20px; /* Alinha o elemento no topo com uma margem de 20px */
+   }
+
+   /* Estilo para o menu de lista dentro do contêiner 'content' quando está ativado (menu aberto) e a largura da tela é no máximo 870px */
+   .content.on .list-menu {
+       display: block; /* Exibe o menu de lista */
+   
+   }
+
+   /* Estilo para os itens de menu dentro do menu de lista quando está ativado (menu aberto) e a largura da tela é no máximo 870px */
+   .content.on .list-menu li {
+       text-align: center; /* Alinha o texto ao centro */
+       display: flex; /* Usa o modelo de layout flexível */
+       justify-content: center; /* Centraliza os elementos horizontalmente */
+   }
+
+   /* Estilo para os links dentro dos itens de menu dentro do menu de lista quando está ativado (menu aberto) e a largura da tela é no máximo 870px */
+   .content.on .list-menu li a {
+       font-size: 4rem; /* Define o tamanho da fonte como 4rem */
+       display: block; /* Define como bloco */
+   }
+
+   /* Estilo para a animação do botão de alternância de menu quando está ativado (menu aberto) e a largura da tela é no máximo 870px */
+   .content.on .menu-toggle .one {
+       transform: rotate(45deg) translate(8px, -7px); /* Rotaciona e move o elemento */
+   }
+   .content.on .menu-toggle .two {
+       opacity: 0; /* Define a opacidade como 0 */
+   }
+   .content.on .menu-toggle .three {
+       transform: rotate(-45deg) translate(20px, -6px); /* Rotaciona e move o elemento */
+   }
+}
+
+
+
+
+
+
+
+/* Media query para dispositivos com largura máxima de 720px */
+@media (max-width: 720px) {
+   /* Estilo para o título h1 dentro do conteúdo principal quando a largura da tela é no máximo 720px */
+   .conteudo-principal h1 {
+       width: 350px; /* Define a largura do título */
+       text-align: center; /* Alinha o texto ao centro */
+   }
+}
+
+@media (max-width: 768px) {
+    .abobora .botao {
+        width: 100%; /* Altera o layout para ocupar toda a largura da tela em telas menores */
+    }
+    .abobora h1{
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media (max-width: 645px) {
+
+   /* Estilo para a seção de contatos quando a largura da tela é no máximo 645px */
+   .contatos-secao {
+      width: 200px; /* Define a largura da seção de contatos */
+   }
+
+   /* Estilo para o título h2 dentro do conteúdo principal quando a largura da tela é no máximo 645px */
+   .conteudo-principal h2 {
+       width: 300px; /* Define a largura do título */
+       text-align: center; /* Alinha o texto ao centro */
+   }
+}
+
+
+
+
+
+
+/* Media query para dispositivos com largura máxima de 399px */
+@media (max-width: 399px) {
+   /* Estilo para o título h1 dentro do conteúdo principal quando a largura da tela é no máximo 399px */
+   .conteudo-principal h1 {
+      font-size: 3rem; /* Define o tamanho da fonte do título h1 */
+   }
+}
+
+
+
